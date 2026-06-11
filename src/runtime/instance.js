@@ -1,13 +1,26 @@
+import { Story } from "inkjs";
 import { id, addonType } from "../../config.caw.js";
 import AddonTypeMap from "../../template/addonTypeMap.js";
 
 export default function (parentClass) {
   return class extends parentClass {
-    constructor() {
-      super();
-      const properties = this._getInitProperties();
-      if (properties) {
-      }
+    constructor(inst, properties) {
+      super(inst);
+
+			// story data
+			this._story = null;
+
+			// caches and buffers
+			this._storyjson = null;
+			this._loopedChoice = null;
+			this._loopedTag = null;
+
+      this._functionParams = [];
+			this._lastChangedVar = "";
+
+			if (properties)		// note properties may be null in some cases
+			{
+			}
     }
 
     _trigger(method) {
@@ -53,12 +66,25 @@ export default function (parentClass) {
 
     _saveToJson() {
       return {
-        // data to be saved for savegames
-      };
+				storyjson: this._story ? this._story.ToJson() : null,
+				storystate: this._story ? this._story.state.ToJson() : null
+			};
     }
 
     _loadFromJson(o) {
-      // load state for savegames
+      this._story = new Story(o.storyjson);
+			this._story.state.LoadJson(o.storystate);
+    }
+
+    toConstructAllowedValue(value) {
+      if (typeof value === 'boolean') {
+          return value ? 1 : 0;
+      } else if (value === null || value === undefined) {
+          return "";
+      } else if (typeof value === 'string' || typeof value === 'number') {
+          return value;
+      }
+      return value.toString();
     }
   };
 }

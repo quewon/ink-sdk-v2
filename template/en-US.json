@@ -1,118 +1,284 @@
 {
   "languageTag": "en-US",
-  "fileDescription": "Strings for sample_addon.",
+  "fileDescription": "Strings for smugrainbowpony_ink.",
   "text": {
     "plugins": {
-      "sample_addon": {
-        "name": "Sample Addon",
-        "description": "Description",
+      "smugrainbowpony_ink": {
+        "name": "Ink",
+        "description": "Provides easy support for Ink stories",
         "help-url": "https://www.construct.net",
         "aceCategories": {
-          "Ace_Folders_In_Category_Folder": "Ace_Folders_In_Category_Folder",
-          "Aces_Files_In_Category_Folder": "Aces_Files_In_Category_Folder",
-          "Aces_In_Single_File": "Aces_In_Single_File"
+          "ink": "Ink",
+          "ink-choices": "Ink Choices",
+          "ink-functions": "Ink Functions",
+          "ink-variables": "Ink Variables",
+          "ink-tags": "Ink Tags"
         },
         "properties": {},
         "actions": {
-          "ActionCombo": {
-            "list-name": "Sample Action Combo",
-            "display-text": "Sample Action Combo {0}",
-            "description": "This is a sample action",
+          "continue": {
+            "list-name": "Continue",
+            "display-text": "Continue (maximally: {0})",
+            "description": "Ask the story to move on.",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param",
-                "items": {
-                  "test": "test",
-                  "test2": "test2"
-                }
+              "maximally": {
+                "name": "Maximally",
+                "desc": "Check this if you want to get as far as you can."
               }
             }
           },
-          "Action": {
-            "list-name": "Sample Action",
-            "display-text": "Sample Action {0}",
-            "description": "This is a sample action",
+          "go-to": {
+            "list-name": "Go to",
+            "display-text": "Go to {0}",
+            "description": "Divert the story to a different place.",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
+              "path": {
+                "name": "Path",
+                "desc": "The ink path to go to."
               }
             }
           },
-          "AsyncAction": {
-            "list-name": "Sample Action Async",
-            "display-text": "Sample Action Async",
-            "description": "This is a sample action",
-            "params": {}
-          },
-          "SampleAction": {
-            "list-name": "Sample Action",
-            "display-text": "Sample Action {0}",
-            "description": "This is a sample action",
+          "load-state": {
+            "list-name": "Load Story State",
+            "display-text": "Load state from {0}",
+            "description": "Load a story state from a JSON string.",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
+              "state": {
+                "name": "Story State JSON string",
+                "desc": "The story state to load into the story. Most likely coming from a file."
+              }
+            }
+          },
+          "set-story": {
+            "list-name": "Set story",
+            "display-text": "Load story from {0}",
+            "description": "Load a story in the ink engine.",
+            "params": {
+              "story-json": {
+                "name": "Story JSON string",
+                "desc": "The story data to load into ink. Most likely coming from a file."
+              }
+            }
+          },
+          "choose": {
+            "list-name": "Choose",
+            "display-text": "Choosing (choice {0})",
+            "description": "Select a choice from the choice list",
+            "params": {
+              "choice": {
+                "name": "Choice",
+                "desc": "The index of the choice in the list."
+              }
+            }
+          },
+          "add-param": {
+            "list-name": "Add parameter",
+            "display-text": "Add parameter {0}",
+            "description": "Add a parameter to an Ink function call.",
+            "params": {
+              "param": {
+                "name": "Parameter",
+                "desc": "The value of the parameter."
+              }
+            }
+          },
+          "call-function": {
+            "list-name": "Call function",
+            "display-text": "Call {0}",
+            "description": "Call an Ink function.",
+            "params": {
+              "func": {
+                "name": "Function name",
+                "desc": "The name of the function that you want to run."
+              }
+            }
+          },
+          "set-variable": {
+            "list-name": "Set variable",
+            "display-text": "Set Variable: {0} <- {1}",
+            "description": "Set the value of an ink variable.",
+            "params": {
+              "var": {
+                "name": "Variable",
+                "desc": "The ink variable to start set."
+              },
+              "value": {
+                "name": "Variable",
+                "desc": "The value to set the variable to."
+              }
+            }
+          },
+          "start-watching-var": {
+            "list-name": "Watch variable",
+            "display-text": "Listening for changes in {0}",
+            "description": "Start listening for changes in ink variable.",
+            "params": {
+              "var": {
+                "name": "Variable",
+                "desc": "The ink variable to start listening."
               }
             }
           }
         },
         "conditions": {
-          "ConditionCombo": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition {0}",
-            "description": "This is a sample condition",
+          "can-continue": {
+            "list-name": "Can continue",
+            "display-text": "Story can continue",
+            "description": "Test if the story can continue.",
+            "params": {}
+          },
+          "for-each-choice": {
+            "list-name": "For each choice",
+            "display-text": "For each available choice",
+            "description": "Loop over every currently available choice. Use 'LoopChoiceText' and 'LoopChoiceIndex' to get its info.",
+            "params": {}
+          },
+          "has-choices": {
+            "list-name": "Has choices",
+            "display-text": "Story currently has choices available",
+            "description": "Test if the story currently has choices to pull from.",
+            "params": {}
+          },
+          "check-tags": {
+            "list-name": "Check tag exists",
+            "display-text": "Tags contain {0}",
+            "description": "Check that a specific tag exists in the passage",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param",
-                "items": {
-                  "TRUE": "True",
-                  "FALSE": "False"
-                }
+              "tag": {
+                "name": "Tag",
+                "desc": "The tag to look for"
               }
             }
           },
-          "Condition": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition {0}",
-            "description": "This is a sample condition",
+          "for-each-tag": {
+            "list-name": "For each tag",
+            "display-text": "For each available tag",
+            "description": "Loop over every currently available tag. Use 'LoopTagText' and 'LoopTagIndex' to get its info.",
+            "params": {}
+          },
+          "has-tags": {
+            "list-name": "Has tags",
+            "display-text": "Passage has tags available",
+            "description": "Test if the passage has tags to pull from.",
+            "params": {}
+          },
+          "any-var-changed": {
+            "list-name": "On any variable changed",
+            "display-text": "On any variable changed",
+            "description": "Trigger when any variable changes values",
+            "params": {}
+          },
+          "var-changed": {
+            "list-name": "On variable changed",
+            "display-text": "On variable {0} changed",
+            "description": "Trigger when variable changes values",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
+              "var": {
+                "name": "Variable",
+                "desc": "The name of the ink variable to watch"
               }
             }
-          },
-          "Trigger": {
-            "list-name": "Sample Trigger",
-            "display-text": "Sample Trigger",
-            "description": "This is a sample trigger",
-            "params": {}
-          },
-          "SampleCondition": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition",
-            "description": "This is a sample condition",
-            "params": {}
           }
         },
         "expressions": {
-          "Expression2": {
-            "translated-name": "Expression2",
-            "description": "Sample Expression",
+          "current-text": {
+            "translated-name": "CurrentText",
+            "description": "Text built by the last call to Continue.",
             "params": {}
           },
-          "Expression": {
-            "translated-name": "Expression",
-            "description": "Sample Expression",
+          "save-state": {
+            "translated-name": "StateToJson",
+            "description": "The state of the story as a JSON string.",
             "params": {}
           },
-          "SampleExpression": {
-            "translated-name": "SampleExpression",
-            "description": "This is a sample expression",
+          "choice-text": {
+            "translated-name": "ChoiceText",
+            "description": "Text to display for the given choice.",
+            "params": {
+              "choice": {
+                "name": "Choice",
+                "desc": "The index of the choice in the list."
+              }
+            }
+          },
+          "choices-amount": {
+            "translated-name": "ChoicesAmount",
+            "description": "Number of available choices.",
             "params": {}
+          },
+          "loop-choice-index": {
+            "translated-name": "LoopChoiceIndex",
+            "description": "Get the index of the current choice in the loop",
+            "params": {}
+          },
+          "loop-choice-text": {
+            "translated-name": "LoopChoiceText",
+            "description": "Get the text of the current choice in the loop",
+            "params": {}
+          },
+          "eval-function": {
+            "translated-name": "EvaluateFunction",
+            "description": "The output of your Ink function.",
+            "params": {
+              "func": {
+                "name": "Function name",
+                "desc": "The name of the function that you want to run."
+              }
+            }
+          },
+          "last-function-output": {
+            "translated-name": "LastFunctionOutput",
+            "description": "The output value of your last Ink function call.",
+            "params": {}
+          },
+          "last-function-return": {
+            "translated-name": "LastFunctionReturn",
+            "description": "The return value of your last Ink function call.",
+            "params": {}
+          },
+          "key-value-tag": {
+            "translated-name": "KeyValueTag",
+            "description": "Get the value corresponding to a key in a tag formatted to have 'KEY SEPARATOR VALUE'. Spaces around SEPARATOR are ignored.",
+            "params": {
+              "key": {
+                "name": "Key",
+                "desc": "The KEY to look for in the tags"
+              },
+              "sep": {
+                "name": "Separator",
+                "desc": "The separator between KEY and VALUE."
+              }
+            }
+          },
+          "loop-tag-index": {
+            "translated-name": "LoopTagIndex",
+            "description": "Get the index of the current tag in the loop",
+            "params": {}
+          },
+          "loop-tag-text": {
+            "translated-name": "LoopTagText",
+            "description": "Get the text of the current tag in the loop",
+            "params": {}
+          },
+          "tags-amount": {
+            "translated-name": "TagsAmount",
+            "description": "Number of available tags.",
+            "params": {}
+          },
+          "last-changed-var": {
+            "translated-name": "LastChangedVariable",
+            "description": "The name of the last changed Ink variable",
+            "params": {}
+          },
+          "var-value": {
+            "translated-name": "VariableValue",
+            "description": "The value of an ink variable",
+            "params": {
+              "var": {
+                "name": "Variable",
+                "desc": "The ink variable to fetch the value for"
+              }
+            }
           }
         }
       }

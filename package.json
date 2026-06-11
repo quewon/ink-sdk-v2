@@ -26,5 +26,8 @@
     "init": "npm install && node build/init.js",
     "generateDocs": "cd build && node generateDocumentation.js",
     "publish": "cd build && node publish.js"
+  },
+  "dependencies": {
+    "inkjs": "^2.4.0"
   }
 }

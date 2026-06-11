@@ -1,15 +1,14 @@
 export const config = {
+  id: "save-state",
   highlight: false,
   isDeprecated: false,
-  isTrigger: true,
-  listName: "Sample Trigger",
-  displayText: "Sample Trigger",
-  description: "This is a sample trigger",
+  returnType: "string",
+  description: "The state of the story as a JSON string.",
   params: [],
 };
 
 export const expose = true;
 
 export default function () {
-  return true;
+  return this._story.state.ToJson();
 }

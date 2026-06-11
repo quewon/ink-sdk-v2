@@ -7,11 +7,11 @@ import {
 import _version from "./version.js";
 export const addonType = ADDON_TYPE.PLUGIN;
 export const type = PLUGIN_TYPE.OBJECT;
-export const id = "skymen_ink";
+export const id = "SmugRainbowPony_INK";
 export const name = "Ink";
 export const version = _version;
 export const minConstructVersion = undefined;
-export const author = "skymen";
+export const author = "SmugRainbowPony, skymen";
 export const website = "https://www.construct.net";
 export const documentation = "https://www.construct.net";
 export const description = "Provides easy support for Ink stories";
@@ -38,10 +38,16 @@ export const files = {
 };
 
 // categories that are not filled will use the folder name
-export const aceCategories = {};
+export const aceCategories = {
+  "ink": "Ink",
+  "ink-tags": "Ink Tags",
+  "ink-choices": "Ink Choices",
+  "ink-variables": "Ink Variables",
+  "ink-functions": "Ink Functions",
+};
 
 export const info = {
-  // icon: "icon.svg",
+  icon: "icon.svg",
   // PLUGIN world only
   // defaultImageUrl: "default-image.png",
   Set: {

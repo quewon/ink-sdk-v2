@@ -1,13 +1,14 @@
 export const config = {
-  highlight: false,
+  id: "current-text",
+  highlight: true,
   isDeprecated: false,
   returnType: "string",
-  description: "Sample Expression",
+  description: "Text built by the last call to Continue.",
   params: [],
 };
 
 export const expose = true;
 
 export default function () {
-  return ":)";
+  return this._story.currentText;
 }
