@@ -1,29 +1,19 @@
 <img src="./src/icon.svg" width="100" /><br>
 # Ink
 <i>Provides easy support for Ink stories</i> <br>
-### Version 2.0.0.0
+### Version 2.0.0.1
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/quewon/ink-sdk-v2/releases/download/SmugRainbowPony_INK-2.0.0.0.c3addon/SmugRainbowPony_INK-2.0.0.0.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/quewon/ink-sdk-v2/releases/download/SmugRainbowPony_INK-2.0.0.1.c3addon/SmugRainbowPony_INK-2.0.0.1.c3addon)
 <br>
 <sub> [See all releases](https://github.com/quewon/ink-sdk-v2/releases) </sub> <br>
 
-#### What's New in 2.0.0.0
-- **Added:** - HasTags (checks if a passage has tags)
-- **Added:** - LoopTagIndex
-- **Added:** - TagsAmount
-- **Added:** - OnAnyVariableChanged
-- **Added:** - LastChangedVariable
-- **Added:** - Support for calling and evaluating Ink functions
-- **Changed:** - Ported to SDK V2
-- **Changed:** - CheckTags condition is now CheckTagExists
-- **Changed:** - VariableChanged is now OnVariableChanged
-- **Fixed:** - Deprecated KeyValueTag
-- **Fixed:** - Fixed an update issue with observing variables
+#### What's New in 2.0.0.1
+- **Added:** quewon as an author
 
 <sub>[View full changelog](#changelog)</sub>
 
 ---
-<b><u>Author:</u></b> SmugRainbowPony, skymen <br>
+<b><u>Author:</u></b> SmugRainbowPony, quewon, skymen <br>
 <sub>Made using [CAW](https://marketplace.visualstudio.com/items?itemName=skymen.caw) </sub><br>
 
 ## Table of Contents
@@ -109,6 +99,9 @@ npm run dev
 
 ---
 ## Changelog
+
+**2.0.0.1**
+- **Added:** quewon as an author
 
 **2.0.0.0**
 - **Added:** - HasTags (checks if a passage has tags)

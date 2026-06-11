@@ -8,5 +8,10 @@
     "added": "- HasTags (checks if a passage has tags)\n- LoopTagIndex\n- TagsAmount\n- OnAnyVariableChanged\n- LastChangedVariable\n- Support for calling and evaluating Ink functions",
     "changed": "- Ported to SDK V2\n- CheckTags condition is now CheckTagExists\n- VariableChanged is now OnVariableChanged",
     "fixed": "- Deprecated KeyValueTag\n- Fixed an update issue with observing variables"
+  },
+  "2.0.0.1": {
+    "added": "quewon as an author",
+    "changed": "",
+    "fixed": ""
   }
 }
